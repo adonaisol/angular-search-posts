@@ -1,3 +1,7 @@
 <h1>
   {{title}}
 </h1>
+  <input type="text" placeholder="Search" #input (keyup)="0" >
+  <div *ngFor="let post of myPost | search:input.value">
+    <mypost [data]=post></mypost>
+  </div>
